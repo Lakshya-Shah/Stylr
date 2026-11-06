@@ -1,26 +1,80 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #F5F1E9;
+  --bg-secondary: #FAF9F6;
+  --text-primary: #242321;
+  --bg-dark: #29221D;
+  --color-espresso: #35251E;
+  --color-bronze: #A77B55;
+  --color-bronze-light: #C49B74;
+  --text-secondary: #77716B;
+  --border-subtle: #E5DED4;
+  --border-dark: #3E342D;
+  --color-white: #FFFFFF;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-manrope), 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --color-brand-primary: #F5F1E9;
+  --color-brand-secondary: #FAF9F6;
+  --color-brand-dark: #29221D;
+  --color-brand-espresso: #35251E;
+  --color-brand-bronze: #A77B55;
+  --color-brand-bronze-light: #C49B74;
+  --color-brand-text: #242321;
+  --color-brand-muted: #77716B;
+  --color-brand-border: #E5DED4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F5F1E9;
+  color: #242321;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F5F1E9;
+  color: #242321;
+  font-family: var(--font-manrope), 'Manrope', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #A77B55;
+  color: #FFFFFF;
+}
+
+/* Custom editorial scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F1E9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D0C3;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A77B55;
+}
+
+.font-editorial {
+  font-family: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-modern {
+  font-family: var(--font-manrope), 'Manrope', sans-serif;
 }
